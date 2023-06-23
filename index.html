@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <title>Assignment</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url("image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+    text-align: center;
+    margin: 50px;
+    padding: 10px;
+    line-height: 25px ;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 100px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Additional CSS styles for content */
+.main-content {
+  margin-left: 250px; /* Same width as the sidenav */
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#" onclick="showContent('Home')">Home</a>
+  <a href="#" onclick="showContent('Contact')">Contact</a>
+  <a href="#" onclick="showContent('Information')">Information</a>
+  <a href="#" onclick="showContent('Guide')">Guide</a>
+</div>
+
+<!-- Content -->
+<div class="main-content">
+  <h2>Internship Assignment</h2>
+ 
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Travel website</span>
+
+  <!-- Home content -->
+  <div id="Home-content" style="display: none;">
+    <h1>Travel the world with Us!</h1>
+    <p>Welcome to our Travel Website, your ultimate destination for unforgettable travel experiences!<br>
+    Whether you're a passionate adventurer seeking new horizons or a leisure traveler in search of relaxation, we've got you covered. With our carefully curated selection of travel packages, insider tips, and comprehensive guides, we are here to transform your dream vacation into a reality.</p>
+  </div>
+
+  <!-- Contact content -->
+  <div id="Contact-content" style="display: none;">
+    
+    <h1>These are the Contact details.</h1>
+   <p> Ph no : 8080344455 <br>
+    Email : morbalesnehal@gmail.com <br>
+     Name : Snehal Morbale</p>
+  </div>
+
+  <!-- Information content -->
+  <div id="Information-content" style="display: none;">
+   
+    <p>Welcome to our Travel Website, where we unlock the beauty and wonders of the world's most captivating destinations. Whether you're seeking tropical paradises, historical landmarks, or breathtaking natural landscapes, our curated collection of destinations will ignite your wanderlust and inspire your next adventure.</p> <br>
+
+        <li><b>Serenity in Santorini:</b> Lose yourself in the enchanting charm of Santorini, Greece. With its iconic white-washed buildings perched on cliffs overlooking the Aegean Sea, this romantic destination offers stunning sunsets, pristine beaches, and delectable Mediterranean cuisine. Explore ancient ruins, take a dip in crystal-clear waters, or indulge in a rejuvenating spa retreat.</li><br>
+        
+       <li> <b>Roaming the Ruins of Machu Picchu:</b> Embark on an unforgettable journey to the mystical ruins of Machu Picchu, Peru. Immerse yourself in the ancient Inca civilization as you trek along the legendary Inca Trail, surrounded by breathtaking mountain vistas. Discover the awe-inspiring ruins and witness the sunrise over this UNESCO World Heritage site.</li><br>
+        
+      <li> <b>City of Lights - Paris:</b> Experience the magic of Paris, France, the city of love and romance. Stroll along the charming streets, visit iconic landmarks like the Eiffel Tower and Louvre Museum, and savor the exquisite flavors of French cuisine. Lose yourself in the art, culture, and vibrant energy that make Paris an eternal favorite among travelers.</li><br>
+        
+      <li> <b>Exotic Adventures in Costa Rica:</b>  Discover the natural wonders of Costa Rica, a paradise teeming with lush rainforests, active volcanoes, and pristine beaches. Dive into thrilling activities like zip-lining through the canopy, hiking to hidden waterfalls, and spotting colorful wildlife in their natural habitats. Unwind in luxury eco-lodges and embrace the pura vida lifestyle.</li>
+    
+  </div>
+
+  <!-- Guide content -->
+  <div id="Guide-content" style="display: none;">
+   
+    
+       <p>Welcome to the Guide section of our Travel Website,<br> your go-to resource for insider tips and comprehensive information on your favorite destinations.</p>
+        
+        <p>Top Attractions: Discover the must-visit attractions in each destination. Our guides will highlight the most captivating sites, providing historical context, interesting facts, and tips for the best photo opportunities.<br> <br>
+        
+        Local Cuisine: Delve into the culinary delights of your destination with our food guides. Learn about traditional dishes, popular street food, and recommended restaurants. From indulging in pasta and pizza in Italy to savoring mouthwatering street food in Bangkok, our guides will help you navigate the local food scene and awaken your taste buds.<br> <br>
+        
+        Outdoor Adventures: If you're a thrill-seeker or nature enthusiast, our adventure guides are perfect for you. Whether it's hiking through scenic trails, embarking on wildlife safaris, or engaging in water sports, we provide detailed information on the best outdoor activities in each destination. <br> <br>
+        
+        
+        
+        Travel Tips and Practical Information: Planning a successful trip requires practical information and helpful tips. Our guides cover essential travel information such as visa requirements, currency exchange, transportation options, and safety tips.</p>
+  </div>
+</div>
+
+<!-- JavaScript functions to control the sidenav and show content -->
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function showContent(contentId) {
+  // Hide all content
+  var contents = document.querySelectorAll('.main-content > div');
+  for (var i = 0; i < contents.length; i++) {
+    contents[i].style.display = 'none';
+  }
+
+  // Show selected content
+  var content = document.getElementById(contentId + '-content');
+  if (content) {
+    content.style.display = 'block';
+  }
+}
+</script>
+   
+</body>
+</html>
+
